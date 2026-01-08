@@ -14,9 +14,9 @@ public class Motor {
         if (distance != 0) {
             if (distance > 0) {
                 System.out.println("Moving out...");
-                while (distance > 10) {
+                while (distance >= 10) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(400);
                     } catch (InterruptedException e) {
                         System.out.println("Sleep interrupted!");
                     }
@@ -26,9 +26,9 @@ public class Motor {
                 }
             } else {
                 System.out.println("Moving in...");
-                while (distance < -10) {
+                while (distance <= -10) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(400);
                     } catch (InterruptedException e) {
                         System.out.println("Sleep interrupted!");
                     }
@@ -40,7 +40,7 @@ public class Motor {
 
             if (distance != 0) {
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     System.out.println("Sleep interrupted!");
                 }
